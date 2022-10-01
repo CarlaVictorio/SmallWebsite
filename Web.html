@@ -45,7 +45,8 @@
         </table>
     <!--Followers -->
         <label class="form-label">Your number of followers:</label>
-        <div class="container-md mt-3 border" id="followers"></div>
+        <input class="form-control-8 " id="followers" placeholder=" " name="followers" size="50">
+
     </div>
     </div>
 </body>
@@ -79,28 +80,7 @@
         });
     });
 
-    $(document).ready2(function(){
-        $('button#submitBtn').click(function() {
-            $.ajax({
-                type: 'GET',
-                url: "https://api.github.com/users/"+$('input#user-name').val(),
-                data: { get_param: 'value' },
-                dataType: 'json',
-                success: function (data) {
-                    $.each(data, function(index, element) {
-                        $('#followers').append(
-                            '<tr><td>'
-                            + element.followers
-                            + '</td><td>'
-                        );
 
-                    });
-                }
-            });
-
-
-        });
-    });
 </script>
 
 </html>
